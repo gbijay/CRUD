@@ -19,6 +19,17 @@ Route::get('blog', [
 	'as' => 'blog',
 	]);
 
-Route::auth();
+// Route::auth();
 
-Route::get('/home', 'HomeController@index');
+// Route::get('/home', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
+
+Route::post('/create',[
+	'uses' => 'PostController@create',
+	'as' => 'create',
+	]);
+	
+Route::get('view',[
+	'uses'=> 'PostController@view',
+	'as'=> 'view'
+	]);	
